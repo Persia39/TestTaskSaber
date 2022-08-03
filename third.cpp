@@ -20,11 +20,6 @@ struct SerializeNode{
 
 class List {
 public:
-    List() = default;
-    List(int cnt, ListNode* f, ListNode* e) : count(cnt), head(f), tail(e)
-    {
-
-    }
     void Serialize(FILE *file)
     {
         if (file == nullptr)
@@ -124,26 +119,3 @@ private:
     ListNode *tail;
     int count;
 };
-
-int main() {
-//    auto* first = new ListNode{nullptr, nullptr, nullptr, "first"};
-//    auto* second = new ListNode{nullptr, nullptr, nullptr, "second"};
-//    auto* third = new ListNode{nullptr, nullptr, nullptr, "third"};
-//    first->next = second;
-//    first->rand = third;
-//    second->prev = first;
-//    second->next = third;
-//    third->prev = second;
-//    third->rand = second;
-//    List lst(3, first, third);
-//    FILE *file = fopen("testfile", "wb");
-//    lst.Serialize(file);
-//    fclose(file);
-
-
-    List lstt;
-    FILE *file1 = fopen("testfile", "rb");
-    lstt.Deserialize(file1);
-    fclose(file1);
-    return 0;
-}

@@ -1,6 +1,3 @@
-#include <vector>
-#include <iostream>
-#include <algorithm>
 
 void PrintBinary(long long dec_num)
 {
@@ -67,12 +64,4 @@ void PrintBinary(long long dec_num)
         }
         std::copy(std::begin(bin_vector), std::end(bin_vector), std::ostream_iterator<bool>(std::cout));
     }
-}
-int main() {
-    long long dec_num;
-    std::cin >> dec_num;
-
-    PrintBinary(dec_num);
-
-    return 0;
 }
